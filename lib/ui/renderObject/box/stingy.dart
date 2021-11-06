@@ -24,6 +24,7 @@ class RenderStingy extends RenderShiftedBox {
     );
 
     /// choose size
+    /// "sizes go up"
     size = Size(
       constraints.maxWidth,
       constraints.maxHeight,
@@ -32,6 +33,7 @@ class RenderStingy extends RenderShiftedBox {
     final BoxParentData? childParentData = child?.parentData as BoxParentData;
 
     /// choose offset
+    /// "Parent sets position"
     childParentData?.offset = Offset(
       constraints.maxWidth - child!.size.width,
       constraints.maxHeight - child.size.height,

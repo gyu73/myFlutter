@@ -8,6 +8,7 @@ class Stingy extends SingleChildRenderObjectWidget {
 
   @override
   RenderObject createRenderObject(BuildContext context) {
+    // TODO: implement createRenderObject
     return RenderStingy();
   }
 }
