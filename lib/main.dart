@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter/ui/renderObject/box/stingy.dart';
+import 'package:my_flutter/ui/widget/stingy.dart';
 
 void main() {
   runApp(MyApp());
@@ -72,21 +74,21 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            floating: false,
-            pinned: false,
-            expandedHeight: 200,
-            flexibleSpace: FlexibleSpaceBar(
-              title: Text("Animated AppBar"),
-              background: Image.network(
-                "https://i.ytimg.com/vi/qAoLwNPycBs/maxresdefault.jpg",
-                fit: BoxFit.cover,
-              ),
+      body: Container(
+        color: Colors.yellow,
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: double.infinity,
+            minWidth: 100.0,
+            maxHeight: 500.0,
+            minHeight: 100.0,
+          ),
+          child: Stingy(
+            child: Container(
+              color: Colors.red,
             ),
-          )
-        ],
+          ),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
