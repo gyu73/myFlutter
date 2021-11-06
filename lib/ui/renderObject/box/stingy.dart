@@ -15,10 +15,11 @@ class RenderStingy extends RenderShiftedBox {
     /// "constraints go down."
     child?.layout(
       BoxConstraints(
-          minHeight: 50.0,
-          maxHeight: constraints.minHeight,
-          minWidth: 0.0,
-          maxWidth: constraints.minWidth),
+        minHeight: 50.0,
+        maxHeight: constraints.minHeight,
+        minWidth: 0.0,
+        maxWidth: constraints.minWidth,
+      ),
       parentUsesSize: true,
     );
 

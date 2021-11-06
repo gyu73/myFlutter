@@ -74,16 +74,19 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: ConstrainedBox(
-        constraints: BoxConstraints(
-          maxWidth: double.infinity,
-          minWidth: 100.0,
-          maxHeight: 500.0,
-          minHeight: 100.0,
-        ),
-        child: Stingy(
-          child: Container(
-            color: Colors.red,
+      body: Container(
+        color: Colors.yellow,
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: double.infinity,
+            minWidth: 100.0,
+            maxHeight: 500.0,
+            minHeight: 100.0,
+          ),
+          child: Stingy(
+            child: Container(
+              color: Colors.red,
+            ),
           ),
         ),
       ),
